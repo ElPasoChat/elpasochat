@@ -1,0 +1,22 @@
+/* App.module.css */
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Makes the form take up the entire height of the screen */
+    background-color: #f0f0f0;  /* Just an example; use whatever color you like */
+  }
+  
+  .input {
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  

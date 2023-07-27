@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .sectionTitle {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .user {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .banButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .banButton:hover {
+    background-color: white; 
+    color: #dc3545; 
+  }
+  
+  .unbanButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .unbanButton:hover {
+    background-color: white;
+    color: #28a745;
+  }
+  
+  .deleteButton {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .deleteButton:hover {
+    background-color: white;
+    color: #ffc107;
+  }
+  

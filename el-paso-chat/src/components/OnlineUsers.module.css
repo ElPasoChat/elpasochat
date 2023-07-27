@@ -1,0 +1,19 @@
+.onlineUsers {
+  padding: 1em;
+  border: 1px solid #ddd;
+  background-color: #fff;
+ 
+  height: calc(100% - 80px);
+  width: 100%; 
+ 
+}
+
+.onlineUsers h2 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.onlineUsers p {
+  margin: 0.5em 0;
+  color: #666;
+}

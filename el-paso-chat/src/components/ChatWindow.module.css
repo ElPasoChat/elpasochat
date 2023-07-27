@@ -1,0 +1,94 @@
+.chatContainer {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  justify-content: center; /* add this line */
+  background-color: #f1f1f1;
+}
+
+.chatWindow {
+  width: 60%;  /* width of the chat window */
+  padding: 1em;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  overflow-y: auto;
+  max-height: calc(100% - 80px);  /* adjust as needed */
+  margin-right: 2em;  /* space between chatWindow and onlineUsers */
+}
+
+
+
+
+.messages {
+  overflow-y: auto;
+  height: calc(100% - 70px);
+}
+
+
+
+.chatUsername {
+  color: red;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  padding: 1em;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+
+.form {
+  display: flex;
+  flex-grow: 1;
+}
+
+.input {
+  flex: 1;
+  padding: 0.5em;
+  font-size: 1em;
+  margin-right: 0.5em;
+}
+
+.button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.clearButton {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  background-color: #c82333;
+}
+
+.deleteIcon {
+  cursor: pointer;
+  padding-left: 10px;
+  color: red;
+}

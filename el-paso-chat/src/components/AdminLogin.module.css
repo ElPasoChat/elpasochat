@@ -1,0 +1,46 @@
+/* AdminLogin.module.css */
+
+/* Styling for the admin login container */
+.adminLoginContainer {
+    max-width: 400px;
+    margin: 400px auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Styling for the form inputs and labels */
+  .adminLoginForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .adminLoginForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Styling for the login button */
+  .adminLoginForm button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .adminLoginForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the error message */
+  .adminLoginForm .errorMessage {
+    color: #ff0000;
+    margin-bottom: 10px;
+  }
+  
