@@ -20,12 +20,12 @@ function ChatWindow({ username }) {
   }, [messages]);
 
   useEffect(() => {
-    const socket = io('http://localhost:3001');
+    const socket = io('https://elpasochat-c2d460370726.herokuapp.com');
     socket.emit('login', username);
 
     const fetchMessages = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/message');
+        const response = await axios.get('https://elpasochat-c2d460370726.herokuapp.com/api/message');
         setMessages(response.data?.messages);
       } catch (error) {
         console.error('Error fetching messages:', error);
@@ -57,7 +57,7 @@ function ChatWindow({ username }) {
 
   const handleDeleteMessage = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/api/message/${id}`);
+      await axios.delete(`https://elpasochat-c2d460370726.herokuapp.com/api/message/${id}`);
       setMessages(messages.filter(message => message._id !== id));
     } catch (error) {
       console.error(`Error deleting message with id ${id}:`, error);

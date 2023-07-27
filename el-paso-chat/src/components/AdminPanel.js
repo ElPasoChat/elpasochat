@@ -3,8 +3,6 @@ import axios from 'axios';
 import { io } from "socket.io-client";
 import styles from './AdminPanel.module.css';
 
-
-
 const AdminPanel = () => {
   const [messages, setMessages] = useState([]);
   const [users, setUsers] = useState([]);
@@ -12,18 +10,16 @@ const AdminPanel = () => {
   const deleteMessage = async (id) => {
     console.log(`Deleting message with id: ${id}`); 
     try {
-      await axios.delete(`http://localhost:3001/api/message/${id}`);
+      await axios.delete(`https://elpasochat-c2d460370726.herokuapp.com/api/message/${id}`);
       setMessages(messages.filter(message => message._id !== id));
     } catch (error) {
       console.error('Error deleting message:', error);
     }
   };
-  
-  
 
   const toggleBan = async (id, banned) => {
     try {
-      const response = await axios.patch(`http://localhost:3001/api/users/${id}`, { banned });
+      const response = await axios.patch(`https://elpasochat-c2d460370726.herokuapp.com/api/users/${id}`, { banned });
       setUsers(users.map(user => user._id === id ? response.data.user : user));
     } catch (error) {
       console.error('Error banning/unbanning user:', error);
@@ -33,7 +29,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/message');
+        const response = await axios.get('https://elpasochat-c2d460370726.herokuapp.com/api/message');
         setMessages(response.data?.messages);
       } catch (error) {
         console.error('Error fetching messages:', error);
@@ -42,14 +38,14 @@ const AdminPanel = () => {
 
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/users');
+        const response = await axios.get('https://elpasochat-c2d460370726.herokuapp.com/api/users');
         setUsers(response.data?.users);
       } catch (error) {
         console.error('Error fetching users:', error);
       }
     };
 
-    const socket = io("http://localhost:3001");
+    const socket = io("https://elpasochat-c2d460370726.herokuapp.com");
   
     socket.on("message", (message) => {
       setMessages((messages) => [...messages, message]);
@@ -99,6 +95,5 @@ const AdminPanel = () => {
     </div>
   );
 };
-  
 
 export default AdminPanel;

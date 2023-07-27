@@ -1,7 +1,6 @@
-// AdminLogin.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom';
 import styles from './AdminLogin.module.css';
 
 const AdminLogin = () => {
@@ -11,17 +10,15 @@ const AdminLogin = () => {
   });
 
   const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/admin/login', formData);
+      const response = await axios.post('https://elpasochat-c2d460370726.herokuapp.com/admin/login', formData);
 
       localStorage.setItem('adminToken', response.data.token);
-
-      // Use navigate('/admin/panel') instead of history.push('/admin/panel')
       navigate('/admin/panel');
     } catch (error) {
       console.error('Error during admin login:', error);
