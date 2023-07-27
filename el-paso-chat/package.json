@@ -41,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^2.1.3"
   }
 }
