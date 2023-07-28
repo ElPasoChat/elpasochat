@@ -2,9 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
+    "heroku-postbuild": "echo Skip building on Heroku because this is a backend only",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,11 +20,5 @@
     "mongoose": "^7.4.0",
     "socket.io": "^4.7.1",
     "ws": "^8.13.0"
-  },
-
-  "devDependencies": {
-    "react-scripts": "5.0.0"
   }
-  
-  
 }
