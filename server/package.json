@@ -2,9 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
     "heroku-postbuild": "echo Skip building on Heroku because this is a backend only",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
